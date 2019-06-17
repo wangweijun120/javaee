@@ -1,0 +1,136 @@
+body,#container{
+    min-width: 1205px;
+}
+
+.courseHead{
+    padding: 20px 0 20px 20px;
+    height: 290px;
+}
+
+#courseImg{
+    float: left;
+}
+
+#courseHeadRight{
+    float: left;
+    margin-left: 25px;
+    height: 250px;
+}
+
+#courseHeadRightContent{
+    height: 200px;
+}
+
+.tabarea{
+    height: 35px;
+    margin-bottom: 15px;
+    padding-left: 8px;
+    border-top: 1px solid #eaeaea;
+}
+
+.tabbtn{
+    height: 35px;
+    line-height: 35px;
+    width: 70px;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.tabbtn:hover{
+    color: #51C385FF;
+}
+
+.tabselected{
+    font-weight: bold;
+    color: #51C385FF;
+    cursor: default;
+}
+
+.courseContent{
+    background: #fff;
+    margin: auto;
+    box-shadow: 1px 1px 3px #ccc;
+    margin-bottom: 100px;
+}
+
+#courseIntro{
+    padding: 20px;
+}
+
+#courseCatalog{
+    padding-bottom: 10px;
+}
+
+.courseContentHead,.courseForumItemIner{
+    border-bottom: 1px solid #eaeaea;
+}
+
+#courseIntroText{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.chapter{
+    margin-bottom: 15px;
+}
+
+.chapterTitle{
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    color: #999;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.chapterItem{
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    color:#000; 
+    padding-left: 20px;
+}
+.chapterItem:hover,.courseForumItem:hover{
+    background: #efefef;
+}
+
+.chapterItemTag{
+    width: 65px;
+    float: left;
+    color: #999;
+}
+
+.chapterItemName{
+    float: left;
+}
+
+#courseForum{
+    padding-bottom: 100px;
+}
+
+.courseForumItem{
+    padding:0 20px;
+}
+
+.courseForumItemIner{
+    padding:20px 0;
+}
+
+.courseForumItemHead{
+    height: 30px;
+}
+
+.courseForumItemCont{
+    padding: 10px 0 14px 0;
+    line-height: 24px;
+}
+
+.mypagination{
+    float: right;
+    margin:30px 40px;
+}

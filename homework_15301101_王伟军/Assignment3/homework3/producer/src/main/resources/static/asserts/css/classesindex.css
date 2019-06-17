@@ -1,0 +1,26 @@
+.verticalcenter{
+  height: 40px;
+  line-height: 40px;
+}
+
+.card a:link,.card a:visited{
+    color:#444;
+    text-decoration:none;
+}
+
+.card a:hover h4,.card a:hover h5{
+    color: #17a2b8;
+    text-decoration:underline;
+}
+
+.divImage{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 0px;
+}
+
+.divImage h4,.divImage p{
+    color: white;
+}
+
+

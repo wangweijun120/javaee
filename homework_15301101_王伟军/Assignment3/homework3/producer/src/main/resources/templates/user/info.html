@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>课程确认</title>
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/asserts/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/asserts/vendor/bootstrap/css/bootstrap-theme.css}" rel="stylesheet">
+    <link th:href="@{/asserts/vendor/elegantIcons/elegant-icons-style.css}" rel="stylesheet">
+    <link th:href="@{/asserts/css/main.css}" rel="stylesheet">
+    <link th:href="@{/asserts/font-awesome/css/font-awesome.min.css}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<!-- container section start -->
+<section id="container" class="">
+
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!--<h3 class="page-header"><i class="fa fa-file-text-o"></i> 完善信息</h3>-->
+                    <ol class="breadcrumb">
+                        <li><i class="fa fa-home"></i><a href="/">首页</a></li>
+                        <li><i style="margin-left:10px" class="fa fa-file-text-o"></i>私教课程</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            确认课程
+                        </header>
+                        <div class="panel-body">
+                            <form class="form-horizontal " method="post" id="perfect_PUIForm" name="perfect_PUIForm">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">课程名称</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" style="color:black" id="perfect_username" name="className">
+                                    </div>
+                                    <label class="col-sm-2 control-label" style="color:red;text-align:left;" id="perfect_usernamePrompt" name="perfect_usernamePrompt"></label>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-10 col-sm-offset-2" >
+                                        <button type="" class="btn btn-primary" id="perfect_PUInfor" name="perfect_PUInfor">确认</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!--main content end-->
+</section>
+<!-- container section end -->
+
+<!-- javascripts -->
+</body>
+<script th:src="@{/asserts/vendor/jquery/jquery.js}"></script>
+<script th:src="@{/asserts/vendor/jquery/jquery-form.js}"></script>
+
+<script>
+
+    $('#perfect_PUIForm').ajaxForm( // 提交表单
+        {
+            url: '/sendEmail',
+            type: 'post',
+            dataType: 'json',
+            success: function (data) {
+                if (data.code==200){
+                    alert("课程确认成功，请及时查看邮件")
+                }else {
+                    alert("确认失败")
+                }
+            },
+            error: function (request) {
+                alert("未知的错误");
+            },
+        });
+</script>
+
+
+</html>

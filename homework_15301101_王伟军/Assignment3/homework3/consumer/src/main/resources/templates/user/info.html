@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>个人信息</title>
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/asserts/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/asserts/vendor/bootstrap/css/bootstrap-theme.css}" rel="stylesheet">
+    <link th:href="@{/asserts/vendor/elegantIcons/elegant-icons-style.css}" rel="stylesheet">
+    <link th:href="@{/asserts/css/main.css}" rel="stylesheet">
+    <link th:href="@{/asserts/font-awesome/css/font-awesome.min.css}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<!-- container section start -->
+<section id="container" class="">
+
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!--<h3 class="page-header"><i class="fa fa-file-text-o"></i> 完善信息</h3>-->
+                    <ol class="breadcrumb">
+                        <li><i class="fa fa-home"></i><a href="/">首页</a></li>
+                        <li><i style="margin-left:10px" class="fa fa-file-text-o"></i>完善个人信息</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            完善信息
+                        </header>
+                        <div class="panel-body">
+                            <form class="form-horizontal " method="post" id="perfect_PUIForm" name="perfect_PUIForm">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">姓名</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" style="color:black" id="perfect_username" name="perfect_username">
+                                    </div>
+                                    <label class="col-sm-2 control-label" style="color:red;text-align:left;" id="perfect_usernamePrompt" name="perfect_usernamePrompt"></label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">性别</label>
+                                    <div class="col-sm-2">
+                                        <div class="btn-row">
+                                            <div class="btn-group" data-toggle="buttons" >
+                                                <label id="perfect_male_label" class="btn btn-default">
+                                                    <input type="radio" id="perfect_male" name="perfect_male"> 男♂
+                                                </label>
+                                                <label id="perfect_female_label" class="btn btn-default">
+                                                    <input type="radio" id="perfect_female" name="perfect_female"> 女♀
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--<label class="col-sm-1 control-label" id="perfect_sexPrompt" name="perfect_sexPrompt"></label>-->
+                                </div>
+                                <input type="hidden" class="form-control" style="color:black" id="perfect_sex" name="perfect_sex">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">公司</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" style="color:black" id="perfect_company" name="perfect_company" required>
+                                    </div>
+                                    <label class="col-sm-2 control-label" style="color:red;text-align:left;" id="perfect_companyPrompt" name="perfect_companyPrompt" ></label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">部门</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" style="color:black" id="perfect_department" name="perfect_department" required>
+                                    </div>
+                                    <label class="col-sm-2 control-label" style="color:red;text-align:left;" id="perfect_departmentPrompt" name="perfect_departmentPrompt"></label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">职位</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" style="color:black" id="perfect_position" name="perfect_position" required>
+                                    </div>
+                                    <label class="col-sm-2 control-label" style="color:red;text-align:left;" id="perfect_positionPrompt" name="perfect_positionPrompt"></label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">办公室</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" style="color:black" id="perfect_office" name="perfect_office" required>
+                                    </div>
+                                    <label class="col-sm-2 control-label" style="color:red;text-align:left;" id="perfect_officePrompt" name="perfect_officePrompt"></label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">手机号码</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"  class="form-control round-input" style="color:black" id="perfect_cellphone" name="perfect_cellphone" required>
+                                    </div>
+                                    <label class="col-sm-2 control-label" style="color:red;text-align:left;" id="perfect_cellphonePrompt" name="perfect_cellphonePrompt"></label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">固定电话</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"  class="form-control round-input" style="color:black" id="perfect_fixedtelephone" name="perfect_fixedtelephone" required>
+                                    </div>
+                                    <label class="col-sm-2 control-label" style="color:red;text-align:left;" id="perfect_fixedtelephonePrompt" name="perfect_fixedtelephonePrompt"></label>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-10 col-sm-offset-2" >
+                                        <button type="" class="btn btn-primary" id="perfect_PUInfor" name="perfect_PUInfor">确认</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!--main content end-->
+</section>
+<!-- container section end -->
+
+<!-- javascripts -->
+</body>
+<script th:src="@{/asserts/vendor/jquery/jquery.js}"></script>
+<script th:src="@{/asserts/vendor/jquery/jquery-form.js}"></script>
+
+<script th:inline="javascript">
+
+    var sex;
+
+    $(document).ready(function(){// 初始化内容
+        sex = "男";
+
+        var name = [[${user.name}]];
+        sex = [[${user.sex}]];
+        var company = [[${user.company}]];
+        var department = [[${user.department}]];
+        var position = [[${user.position}]];
+        var office = [[${user.office}]];
+        var cellphone = [[${user.cellphone}]];
+        var fixedtelephone = [[${user.fixedtelephone}]];
+
+        $("#perfect_username").val(name);
+        $("#perfect_company").val(company);
+        $("#perfect_department").val(department);
+        $("#perfect_position").val(position);
+        $("#perfect_office").val(office);
+        $("#perfect_cellphone").val(cellphone);
+        $("#perfect_fixedtelephone").val(fixedtelephone);
+
+        if (sex == "男")
+            $("#perfect_male_label").addClass("active");
+        else
+            $("#perfect_female_label").addClass("active");
+
+        /* $("perfect_male_label").attr("class","btn btn-default");
+         $("perfect_female_label").attr("class","btn btn-default active");*/
+        $('#perfect_sexPrompt').text(sex);
+        $('#perfect_sex').val(sex);
+    });
+
+
+    $('#perfect_male_label').click(function () {    // 当选中“男”
+        sex = "男";
+        $('#perfect_sexPrompt').text(sex);
+        $('#perfect_sex').val(sex);
+    });
+    $('#perfect_female_label').click(function () {  // 当选中“女”
+        sex = "女";
+        $('#perfect_sexPrompt').text(sex);
+        $('#perfect_sex').val(sex);
+    });
+
+    $('#perfect_PUIForm').ajaxForm( // 提交表单
+        {
+            url: '/user/info',
+            type: 'post',
+            dataType: 'json',
+            success: function (data) {
+                if (data.code==200){
+                    alert("保存成功")
+                }else {
+                    alert("保存失败")
+                }
+            },
+            error: function (request) {
+                alert("未知的错误");
+            },
+        });
+</script>
+
+
+</html>
